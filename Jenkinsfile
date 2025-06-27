@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/inventory-service.git'
+                git 'https://github.com/Jivinlol/CICD.git'
             }
         }
 
