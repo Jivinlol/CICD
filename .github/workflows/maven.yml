@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-
+    
     runs-on: cicd
 
     steps:
@@ -30,7 +30,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
   docker-build:
-  
+    needs: build
     runs-on: cicd
 
     steps:
