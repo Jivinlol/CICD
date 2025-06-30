@@ -6,7 +6,7 @@ EXPOSE 8080
 
 WORKDIR /app
 
-COPY target/springBootCicd.jar springBootCicd.jar
+COPY target/springBootCicd.jar app.jar
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "/springBootCicd.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
