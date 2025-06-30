@@ -56,6 +56,9 @@ jobs:
 
            - name: Run docker container
              run: docker run -d -p 8082:8080 jlol123/cicd:latest
+
+           - name: Sleep for 5 Minutes
+             run: sleep 320 
           
     
 
