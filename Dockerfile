@@ -2,7 +2,7 @@
 FROM eclipse-temurin:21-jdk
 
 # Copy the JAR file (built via Maven)
-EXPOSE 8080
+EXPOSE 9091
 
 ADD target/springBootCicd.jar springBootCicd.jar
 
