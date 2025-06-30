@@ -55,7 +55,7 @@ jobs:
              run:  docker pull jlol123/cicd:latest
 
            - name: Run docker container
-             run: docker run -d -p 8080:8080 jlol123/cicd:latest
+             run: docker run -d -p 8082:8080 jlol123/cicd:latest
           
     
 
