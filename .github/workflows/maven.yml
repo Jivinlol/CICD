@@ -44,11 +44,17 @@ jobs:
         runs-on: cicd
 
         steps:
-          - name: Pull image from docker
-            run:  docker pull jlol123/cicd:latest
+           - name: Login to Docker Hub
+             uses: docker/login-action@v3
+             with:
+              username: ${{ secrets.DOCKERHUB_USERNAME }}
+              password: ${{ secrets.DOCKERHUB_TOKEN }}
+              
+           - name: Pull image from docker
+             run:  docker pull jlol123/cicd:latest
 
-          - name: Ru docker container
-            run: docker run -d -p 8080:8080 jlol123/cicd:latest
+           - name: Run docker container
+             run: docker run -d -p 8080:8080 jlol123/cicd:latest
           
     
 
