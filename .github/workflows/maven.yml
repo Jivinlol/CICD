@@ -37,3 +37,19 @@ jobs:
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+        
+  docker_contianer:
+  
+        needs: build
+        runs-on: cicd
+
+        steps:
+          - name: Pull image from docker
+            run:  docker pull jlol123/cicd:latest
+
+          - name: Ru docker container
+            run: docker run -d -p 8080:8080 jlol123/cicd:latest
+          
+    
+
+    
