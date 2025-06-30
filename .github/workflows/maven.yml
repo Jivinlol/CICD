@@ -33,7 +33,7 @@ jobs:
     - name: Build and push docker image 
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: jlol123/cicd
+        image: jlol123/cicd:12
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
@@ -51,10 +51,10 @@ jobs:
               password: ${{ secrets.DOCKER_PASSWORD }}
               
            - name: Pull image from docker
-             run:  docker pull jlol123/cicd:latest
+             run:  docker pull jlol123/cicd:12
 
            - name: Run docker container
-             run: docker run -d -p 8080:8080 jlol123/cicd:latest
+             run: docker run -d -p 8080:8080 jlol123/cicd:12
           
     
 
