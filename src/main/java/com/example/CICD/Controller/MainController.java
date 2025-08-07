@@ -11,10 +11,6 @@ public class MainController {
     public String getHome(){
         return "Welcome to the Home Page of the Website";
     }
-    @GetMapping("/home")
-    public String getHome(){
-        return "Welcome to the Home Page of the Website";
-    }
     @GetMapping("/add5/{id}")
     public String addFive(@PathVariable Integer id){
         int b = id+5;
