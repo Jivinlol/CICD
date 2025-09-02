@@ -17,9 +17,9 @@ public class MainController {
         return Integer.toString(b);
     }
 
-    @GetMapping("/add10/{id}")
+    @GetMapping("/add8/{id}")
     public String addTen(@PathVariable Integer id){
-        int b = id+10;
+        int b = id+8;
         return Integer.toString(b);
     }
 }
